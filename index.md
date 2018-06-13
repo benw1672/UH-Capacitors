@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+# Machine Learning Aided Discovery of Ultrahigh Capacitive Energy Storage Materials
 
-You can use the [editor on GitHub](https://github.com/benw1672/UltracapacitorsLearning/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Course: EECS 349 Machine Learning | Professor Doug Downey | Spring 2018 | Northwestern University
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Team members: Benjamin Warren (Junior, Materials Science/Computer Science)
 
-### Markdown
+Contact: benjaminwarren2019@u.northwestern.edu
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Abstract
+Ultracapacitors are an emerging class of electronic materials that hold major interest due to their applications in wide-ranging technologies from renewable energies to rail guns. Present high capacitance materials are effective, yet there remain thousands of experimentally uninvestigated material systems with potential for ultrahigh capacitive applications. Reliable high-throughput methods for identifying promising high energy storage materials promise to greatly accelerate the search for better energy materials.
 
-```markdown
-Syntax highlighted code block
+As proof-of-concept, we pull dielectric materials data from Citrination and other databases. Various machine learning regression models are trained on 23 electronic property features to predict a “figure of merit”, FOM = κE<sub>g</sub><sup>2</sup>, proportional to the dielectric energy storage density. We find the most reliable model with a RandomForest learner, which gives correlation coefficient = 0.5703 and relative absolute error = 71.85%. Evaluation against a test set of procedurally generated novel materials suggests NaTaF<sub>3</sub>, NaNbF<sub>3</sub>, and NaHfO<sub>3</sub> as good candidates for experimental evaluation. We conclude by discussing lessons from the machine learning and outlining a multi-tiered computational approach for materials discovery.
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/benw1672/UltracapacitorsLearning/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Motivation
