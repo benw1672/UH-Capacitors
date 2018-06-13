@@ -1,6 +1,6 @@
 # Machine Learning Aided Discovery of Ultrahigh Capacitive Energy Storage Materials
 
-Course: EECS 349 Machine Learning | Professor Doug Downey | Spring 2018 | Northwestern University
+Course: EECS 349 Machine Learning, Professor Doug Downey, Spring 2018, Northwestern University
 
 Team members: Benjamin Warren (Junior, Materials Science/Computer Science)
 
