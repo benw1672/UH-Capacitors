@@ -11,7 +11,6 @@ Note: The machine learning described here was used to support my Materials Scien
 > As recent materials research has shifted focus toward technologies for efficient energy storage and distribution, special attention has been paid to the furtherance of high energy density capacitors, which have excellent versatility and already have broad applications in solar cells, pulsed power systems, and railguns, among others. Anti-ferroelectric (AFE) dielectric materials are considered particularly good candidates for further development of ultracapacitive systems due to their high energy storage densities and low losses. Identification of promising novel AFE dielectrics is a significant first step towards meeting modern global energy demands.<br/> <br/>
 > Our task was to roughly predict the energy storage density of a large number of novel antiferroelectric dielectric materials based on their chemical and structural properties. A large training dataset of known dielectric materials was compiled from multiple materials databases, and tens of machine learning regression models were trained to predict “figure of merit” κE<sub>g</sub><sup>2</sup>, which is proportional to energy storage density, using 23 derived chemical properties as features. We found the most reliable model using a RandomForest learner, which gives correlation coefficient = 0.5703 and relative absolute error = 71.85%. Evaluation against a test set of procedurally generated novel materials suggests NaTaF<sub>3</sub>, NaNbF<sub>3</sub>, and NaHfO<sub>3</sub> as good candidates for experimental evaluation. We conclude by discussing lessons from the machine learning and outlining a multi-tiered computational approach for materials discovery. 
 
-
 ## Motivation
 Ultrahigh capacitive materials (also called ultracapacitors or supercapacitors) fill a special niche in the realm of energy storage technologies. That’s because they exhibit not only the high power densities typical of conventional capacitors, they also can store moderate energy densities, which allows them to serve a variety of functions including power buffering, voltage stabilizing, high-speed device charging, and more.
 
@@ -54,7 +53,11 @@ Running this second-iteration model against test data gave results that were mor
 | NaNbF<sub>3</sub>   | 1116.847      |
 | NaHfO<sub>3</sub>   | 1089.577      |
 
-Interestingly, while the second iteration of models was run with far less training data than the first iteration (only 92 vs 1,218 examples), because the training data samples in the second set were more similar to one another and to the test data, the correlation and error for best-performing models were fairly similar. Additionally, the second-iteration best model appeared to give more realistic results. 
+Interestingly, while the second iteration of models was run with far less training data than the first iteration (only 92 vs 1,218 examples), because the training data samples in the second set were more similar to one another and to the test data, the correlation and error for best-performing models were fairly similar. Additionally, the second-iteration best model appeared to give more realistic results.
+
+Comparing our highest-predicted FOM values for novel compounds to FOM for existing AFE dielectrics, as shown in the plot below, we can see that our three best compounds, all having predicted values > 1000, are right in the range of most known high performing materials. These values must still be verified using DFT, but as of now our discovered materials appear to show promise.
+![target FOM chart](https://github.com/benw1672/UH-Capacitors/blob/master/images/targetFOM.png?raw=true)
+
 
 ## Conclusion and Next Steps
 While the three novel materials -- NaTaF<sub>3</sub>,  NaNbF<sub>3</sub>, and NaHfO<sub>3</sub> -- identified as potentially exhibiting high energy storage density have not yet had their energy storage densities validated with DFT or experimentally testing, Na, Nb, and Ta have nonetheless been indicated in literature as good candidate elements for use in high energy density materials (citation needed), which lends validity to our model results.
