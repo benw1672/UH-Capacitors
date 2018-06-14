@@ -4,7 +4,7 @@
 - Team members: Benjamin Warren (Junior, Materials Science/Computer Science)
 - Contact: benjaminwarren2019@u.northwestern.edu
 
-Note: The machine learning described here was used to support my Materials Science and Engineering 390 design project on ultra-high capacitive materials discovery. Crossover between the projects was approved by both Prof. Downey and my mat sci professor.
+Note: The machine learning described here was used to support my Materials Science and Engineering 390 design project on ultra-high capacitive materials discovery, which further explored theory and design strategies for UH capacitive materials development. Crossover between the projects was approved by both Prof. Downey and my mat sci professor.
 
 ## Abstract
 > As recent materials research has shifted focus toward technologies for efficient energy storage and distribution, special attention has been paid to the furtherance of high energy density capacitors, which have excellent versatility and already have broad applications in solar cells, pulsed power systems, and railguns, among others. Anti-ferroelectric (AFE) dielectric materials are considered particularly good candidates for further development of ultracapacitive systems due to their high energy storage densities and low losses. Identification of promising novel AFE dielectrics is a significant first step towards meeting modern global energy demands.<br/> <br/>
