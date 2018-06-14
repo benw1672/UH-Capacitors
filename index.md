@@ -1,4 +1,3 @@
-# WEBPAGE STILL UNDER CONSTRUCTION!!! WILL BE UP SOON. 
 # Machine Learning for Discovery of Ultrahigh Capacitive Energy Storage Materials
 
 - Course: EECS 349 Machine Learning, Professor Doug Downey, Spring 2018, Northwestern University
