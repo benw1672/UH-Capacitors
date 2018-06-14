@@ -1,18 +1,15 @@
 # WEBPAGE STILL UNDER CONSTRUCTION!!! WILL BE UP SOON. 
 # Machine Learning Aided Discovery of Ultrahigh Capacitive Energy Storage Materials
 
-Course: EECS 349 Machine Learning, Professor Doug Downey, Spring 2018, Northwestern University
-
-Team members: Benjamin Warren (Junior, Materials Science/Computer Science)
-
-Contact: benjaminwarren2019@u.northwestern.edu
+- Course: EECS 349 Machine Learning, Professor Doug Downey, Spring 2018, Northwestern University
+- Team members: Benjamin Warren (Junior, Materials Science/Computer Science)
+- Contact: benjaminwarren2019@u.northwestern.edu
 
 Note: The machine learning described here was used to support my Materials Science and Engineering 390 design project (crossover between the projects was approved by both Prof. Downey and my mat sci professor) on ultra-high capacitive materials discovery.
 
 ## Abstract
-As recent materials research has shifted focus toward technologies for efficient energy storage and distribution, special attention has been paid to the furtherance of high energy density capacitors, which have excellent versatility and already have broad applications in solar cells, pulsed power systems, and railguns, among others. Anti-ferroelectric (AFE) dielectric materials are considered particularly good candidates for further development of ultracapacitive systems due to their high energy storage densities and low losses. Identification of promising novel AFE dielectrics is a significant first step towards meeting modern global energy demands.
-
-Our task is to roughly predict the energy storage density of a large number of novel antiferroelectric dielectric materials based on their chemical and structural properties. A large training dataset of known dielectric materials was compiled from multiple materials databases, and tens of machine learning regression models were trained to predict “figure of merit” κE<sub>g</sub><sup>2</sup>, which is proportional to energy storage density, using 23 derived chemical properties as features. We found the most reliable model using a RandomForest learner, which gives correlation coefficient = 0.5703 and relative absolute error = 71.85%. Evaluation against a test set of procedurally generated novel materials suggests NaTaF<sub>3</sub>, NaNbF<sub>3</sub>, and NaHfO<sub>3</sub> as good candidates for experimental evaluation. We conclude by discussing lessons from the machine learning and outlining a multi-tiered computational approach for materials discovery. 
+> As recent materials research has shifted focus toward technologies for efficient energy storage and distribution, special attention has been paid to the furtherance of high energy density capacitors, which have excellent versatility and already have broad applications in solar cells, pulsed power systems, and railguns, among others. Anti-ferroelectric (AFE) dielectric materials are considered particularly good candidates for further development of ultracapacitive systems due to their high energy storage densities and low losses. Identification of promising novel AFE dielectrics is a significant first step towards meeting modern global energy demands.
+> Our task is to roughly predict the energy storage density of a large number of novel antiferroelectric dielectric materials based on their chemical and structural properties. A large training dataset of known dielectric materials was compiled from multiple materials databases, and tens of machine learning regression models were trained to predict “figure of merit” κE<sub>g</sub><sup>2</sup>, which is proportional to energy storage density, using 23 derived chemical properties as features. We found the most reliable model using a RandomForest learner, which gives correlation coefficient = 0.5703 and relative absolute error = 71.85%. Evaluation against a test set of procedurally generated novel materials suggests NaTaF<sub>3</sub>, NaNbF<sub>3</sub>, and NaHfO<sub>3</sub> as good candidates for experimental evaluation. We conclude by discussing lessons from the machine learning and outlining a multi-tiered computational approach for materials discovery. 
 
 
 ## Motivation
@@ -21,7 +18,7 @@ Ultrahigh capacitive materials (also called ultracapacitors or supercapacitors) 
 We are highly interested in finding novel ultracapacitors with even higher energy storage densities. However, experimentally determining electrical properties is very tedious, and even approximating electric properties using a quantum-mechanical (density functional theory) calculation is highly computationally intensive and can take hours per material. If we wish to examine thousands of potential materials, neither of these options is feasible. Therefore, we can improve our approach by instead using a machine learning model to make high-throughput predictions of energy storage density, the best of which can then be experimentally validated. This is a relatively new approach in the field of materials science, so any positive results may serve as a helpful proof-of-concept.
 
 ## Background
-The energy storage density, U, is proportional to two materials properties of the dielectric: the dielectric constant, κ, and the square of the band gap, Eg. In other words, we can define a desired figure of merit FOM = κE<sub>g</sub><sup>2</sup> ~ U, for which we wish to achieve the maximum value. Large U is difficult to find in practice because κ and Eg are competing quantities.
+The energy storage density, U, is proportional to two materials properties of the dielectric: the dielectric constant, κ, and the square of the band gap, E<sub>g</sub>. In other words, we can define a desired figure of merit FOM = κE<sub>g</sub><sup>2</sup> ~ U, for which we wish to achieve the maximum value. Large U is difficult to find in practice because κ and E<sub>g</sub> are competing quantities.
 
 In particular, Anti-ferroelectric (AFE) dielectric materials are considered particularly good candidates for further development of ultracapacitive systems due to their high energy storage densities and low losses. The the majority of AFEs have a perovskite lattice structure with chemical formula ABO<sub>3</sub>, where A is a monovalent or divalent metal, B is a transition metal, and O may occasionally be replaced by F, Br, or Cl. Because these are the most common high energy storage materials, our focus in this initial machine learning exploration is the prediction of promising novel AFE materials. In the future, this may serve as the basis for similar explorations focusing on other material structures.
 
