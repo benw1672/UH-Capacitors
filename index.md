@@ -31,11 +31,12 @@ Training Data: A NU MSE graduate student previously working on this problem had 
 Test Data: As mentioned earlier, we are focused on making predictions for AFE materials, which commonly take the form of ABO<sub>3</sub> perovskites. So, I wrote a python script to procedurally generate all potentially viable materials of this form. This gave approximately 1400 test materials.
 
 ## Feature Selection
-After conducting review of materials science literature, a team member in my materials design 390 and I determined 23 chemical property features with relevance to the band gap and dielectric constant. These properties, listed in the table below, were calculated for each training and test example by finding the average and range of the property for each element given in the chemical formula.
+After conducting review of materials science literature, a team member in my materials design 390 and I determined 23 chemical property features with relevance to the band gap and dielectric constant. These properties, listed below, were calculated for each training and test example by finding the average and range of the property for each element given in the chemical formula.
 
---table--
+- Average... total number of unfilled valence electrons, row in the periodic table, Pauling electronegativity, number of s valence electrons, number of p valence electrons, number of d valence electrons, Mendeleev number, elemental work function, atomic radius
+- Range... total number of valence electrons, total number of unfilled valence electrons, radius of s orbitals, radius of p orbitals, radius of d orbitals, Pauling electronegativity, number of unfilled p valence electrons, elemental work function, elemental polarizability, elemental crystal structure, Allred Electronegativity, first ionization energy, covalent radii, atomic radii
 
-While I was interested in finding ways to quantify lattice structure information into features, it ultimately proved to be too challenging for the time frame.
+Although I was interested in finding ways to quantify lattice structure information into features, it ultimately proved to be too challenging for the time frame.
 
 ## Initial Results
 Test and training data was exported to .arff files for use in Weka. Then, a regression model to predict FOM was made for each of the regression learners available in Weka and 10-fold cross validated. 
