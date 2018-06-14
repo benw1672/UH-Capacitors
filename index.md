@@ -59,7 +59,7 @@ Comparing our highest-predicted FOM values for novel compounds to FOM for existi
 
 
 ## Conclusion and Next Steps
-While the three novel materials -- NaTaF<sub>3</sub>,  NaNbF<sub>3</sub>, and NaHfO<sub>3</sub> -- identified as potentially exhibiting high energy storage density have not yet had their energy storage densities validated with DFT or experimentally testing, Na, Nb, and Ta have nonetheless been indicated in literature as good candidate elements for use in high energy density materials (citation needed), which lends validity to our model results.
+While the three novel materials -- NaTaF<sub>3</sub>,  NaNbF<sub>3</sub>, and NaHfO<sub>3</sub> -- identified as potentially exhibiting high energy storage density have not yet had their energy storage densities validated with DFT or experimentally testing, Na, Nb, and Ta have nonetheless been indicated in literature as good candidate elements for use in high energy density materials (insert citation here), which lends credibility to our model results.
 
 The fact that our best performing learners were multilayer perceptron and random forest means that it would be very difficult to interpret the models that we built. However, one thing that is certainly clear is that energy storage density derives from a complex network of relationships between both chemical and structural materials properties.
 
