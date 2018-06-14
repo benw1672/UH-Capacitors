@@ -15,6 +15,8 @@ Note: The machine learning described here was used to support my Materials Scien
 ## Motivation
 Ultrahigh capacitive materials (also called ultracapacitors or supercapacitors) fill a special niche in the realm of energy storage technologies. That’s because they exhibit not only the high power densities typical of conventional capacitors, they also can store moderate energy densities, which allows them to serve a variety of functions including power buffering, voltage stabilizing, high-speed device charging, and more.
 
+![supercapacitors](https://github.com/benw1672/UH-Capacitors/blob/master/images/supercapacitors_chart.png?raw=true)
+
 We are highly interested in finding novel ultracapacitors with even higher energy storage densities. However, experimentally determining electrical properties is very tedious, and even approximating electric properties using a quantum-mechanical (density functional theory) calculation is highly computationally intensive and can take hours per material. If we wish to examine thousands of potential materials, neither of these options is feasible. Therefore, we can improve our approach by instead using a machine learning model to make high-throughput predictions of energy storage density, the best of which can then be experimentally validated. This is a relatively new approach in the field of materials science, so any positive results may serve as a helpful proof-of-concept.
 
 ## Background
@@ -62,3 +64,5 @@ The fact that our best performing learners were multilayer perceptron and random
 In the future, these models could be improved upon by the addition of a variety of features to represent lattice structure of a material, as well as refinement of the chemical features used. For further improvement in feature selection, one good option might be greedy feature insertion. Additionally, obtaining more training data would, as always, improve model performance. 
 
 In sum, this project can serve as a proof-of-concept for how machine learning might be applied to materials discovery and design. In this tiered design method, high throughput machine learning methods are applied as an initial filter, followed by validation by more rigorous computational methods (such as DFT), and then only the computationally validated compounds are actually synthesized and experimentally tested. When sufficient quantities of training and test data are available, this cuts back dramatically on the amount of time required to produce viable solutions.
+
+![design illustration](https://github.com/benw1672/UH-Capacitors/blob/master/images/multi-step-design.png?raw=true)
