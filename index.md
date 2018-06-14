@@ -1,5 +1,5 @@
 # WEBPAGE STILL UNDER CONSTRUCTION!!! WILL BE UP SOON. 
-# Machine Learning Aided Discovery of Ultrahigh Capacitive Energy Storage Materials
+# Machine Learning for Discovery of Ultrahigh Capacitive Energy Storage Materials
 
 - Course: EECS 349 Machine Learning, Professor Doug Downey, Spring 2018, Northwestern University
 - Team members: Benjamin Warren (Junior, Materials Science/Computer Science)
@@ -9,7 +9,8 @@ Note: The machine learning described here was used to support my Materials Scien
 
 ## Abstract
 > As recent materials research has shifted focus toward technologies for efficient energy storage and distribution, special attention has been paid to the furtherance of high energy density capacitors, which have excellent versatility and already have broad applications in solar cells, pulsed power systems, and railguns, among others. Anti-ferroelectric (AFE) dielectric materials are considered particularly good candidates for further development of ultracapacitive systems due to their high energy storage densities and low losses. Identification of promising novel AFE dielectrics is a significant first step towards meeting modern global energy demands.
-> Our task is to roughly predict the energy storage density of a large number of novel antiferroelectric dielectric materials based on their chemical and structural properties. A large training dataset of known dielectric materials was compiled from multiple materials databases, and tens of machine learning regression models were trained to predict “figure of merit” κE<sub>g</sub><sup>2</sup>, which is proportional to energy storage density, using 23 derived chemical properties as features. We found the most reliable model using a RandomForest learner, which gives correlation coefficient = 0.5703 and relative absolute error = 71.85%. Evaluation against a test set of procedurally generated novel materials suggests NaTaF<sub>3</sub>, NaNbF<sub>3</sub>, and NaHfO<sub>3</sub> as good candidates for experimental evaluation. We conclude by discussing lessons from the machine learning and outlining a multi-tiered computational approach for materials discovery. 
+
+> Our task was to roughly predict the energy storage density of a large number of novel antiferroelectric dielectric materials based on their chemical and structural properties. A large training dataset of known dielectric materials was compiled from multiple materials databases, and tens of machine learning regression models were trained to predict “figure of merit” κE<sub>g</sub><sup>2</sup>, which is proportional to energy storage density, using 23 derived chemical properties as features. We found the most reliable model using a RandomForest learner, which gives correlation coefficient = 0.5703 and relative absolute error = 71.85%. Evaluation against a test set of procedurally generated novel materials suggests NaTaF<sub>3</sub>, NaNbF<sub>3</sub>, and NaHfO<sub>3</sub> as good candidates for experimental evaluation. We conclude by discussing lessons from the machine learning and outlining a multi-tiered computational approach for materials discovery. 
 
 
 ## Motivation
@@ -27,7 +28,7 @@ Good data collection is one of the most challenging parts of creating a model fo
 
 Training Data: A NU MSE graduate student previously working on this problem had written scripts to pull data from various public materials databases including the Materials Project (Berkeley), Citrination, the NIST Materials Genome Initiative, and CES EduPack. He was able to provide those scripts to us, which allowed for the compilation of a training dataset of 1,218 dielectric materials with known E<sub>g</sub> and κ. From this, we could calculate FOM = κ E<sub>g</sub><sup>2</sup>, which we chose as the target value for our ML regression models.
 
-Test Data: As mentioned earlier, we are focused on making predictions for AFE materials, which commonly take the form of ABO3 perovskites. So, I wrote a python script to procedurally generate all potentially viable materials of this form. This gave approximately 1400 test materials.
+Test Data: As mentioned earlier, we are focused on making predictions for AFE materials, which commonly take the form of ABO<sub>3</sub> perovskites. So, I wrote a python script to procedurally generate all potentially viable materials of this form. This gave approximately 1400 test materials.
 
 ## Feature Selection
 After conducting review of materials science literature, a team member in my materials design 390 and I determined 23 chemical property features with relevance to the band gap and dielectric constant. These properties, listed in the table below, were calculated for each training and test example by finding the average and range of the property for each element given in the chemical formula.
