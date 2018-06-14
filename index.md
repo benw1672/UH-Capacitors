@@ -48,14 +48,14 @@ Running this second-iteration model against test data gave results that were mor
 
 | Material | Predicted FOM |
 |----------|---------------|
-| NaTaF3   | 1165.948      |
-| NaNbF3   | 1116.847      |
-| NaHfO3   | 1089.577      |
+| NaTaF<sub>3</sub>   | 1165.948      |
+| NaNbF<sub>3</sub>   | 1116.847      |
+| NaHfO<sub>3</sub>   | 1089.577      |
 
 Interestingly, while the second iteration of models was run with far less training data than the first iteration (only 92 vs 1,218 examples), because the training data samples in the second set were more similar to one another and to the test data, the correlation and error for best-performing models were fairly similar. Additionally, the second-iteration best model appeared to give more realistic results. 
 
 ## Conclusion and Next Steps
-While the three novel materials -- NaTaF<sub>3</sub>,  NaNbF<sub>3</sub>, and NaHfO<sub>3</sub> -- identified as potentially exhibiting high energy storage density have not yet had their energy storage densities validated with DFT or experimentally testing, Na, Nb, and Ta have nonetheless been indicated in literature as good candidate elements for use in high energy density materials ==(citation needed)==, which lends validity to our model results.
+While the three novel materials -- NaTaF<sub>3</sub>,  NaNbF<sub>3</sub>, and NaHfO<sub>3</sub> -- identified as potentially exhibiting high energy storage density have not yet had their energy storage densities validated with DFT or experimentally testing, Na, Nb, and Ta have nonetheless been indicated in literature as good candidate elements for use in high energy density materials (citation needed), which lends validity to our model results.
 
 The fact that our best performing learners were multilayer perceptron and random forest means that it would be very difficult to interpret the models that we built. However, one thing that is certainly clear is that energy storage density derives from a complex network of relationships between both chemical and structural materials properties.
 
